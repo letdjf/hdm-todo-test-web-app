@@ -15,7 +15,11 @@ export const colors = {
   },
 };
 
+<<<<<<< HEAD
 export const createWebtuneTheme = (p0: { palette: { mode: "light" | "dark"; }; }) => createTheme({
+=======
+export const createWebtuneTheme = () => createTheme({
+>>>>>>> patch-1
   palette: {
     primary: {
       ...colors.primary,

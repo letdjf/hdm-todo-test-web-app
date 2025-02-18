@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import TodoPage from './TodoPage';
+=======
+>>>>>>> patch-1
 import { createTheme, ThemeProvider } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -11,7 +14,11 @@ import { useMemo, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import router from '../config/router';
+<<<<<<< HEAD
 import { createWebtuneTheme } from '../config/theming';
+=======
+import { createWebtuneTheme } from '../config/theming.ts';
+>>>>>>> patch-1
 import { UiThemeContext } from './UiThemeContext';
 import 'react-toastify/dist/ReactToastify.css';
 import 'dayjs/locale/fr'; // import locale
@@ -25,10 +32,18 @@ dayjs.locale('fr');
 
 const App = () => {
   const [ localTheme, setLocalTheme ] = useState(createWebtuneTheme());
+<<<<<<< HEAD
   const uiThemeContext = useMemo(() => ({
     theme: localTheme,
     setTheme: (mode: 'light' | 'dark') => setLocalTheme(createWebtuneTheme({
     palette: {
+=======
+
+  const uiThemeContext = useMemo(() => ({
+    theme: localTheme,
+    setTheme: (mode: 'light' | 'dark') => setLocalTheme(createTheme({
+      palette: {
+>>>>>>> patch-1
         mode,
       },
     })),
@@ -40,7 +55,10 @@ const App = () => {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <RouterProvider router={router} />
           <ToastContainer />
+<<<<<<< HEAD
           <TodoPage />
+=======
+>>>>>>> patch-1
         </LocalizationProvider>
       </ThemeProvider>
     </UiThemeContext.Provider>
